@@ -1,5 +1,7 @@
+black==24.10.0
 fastapi==0.115.6
 pydantic==2.10.4
+pylint==3.3.3
 pytest==8.3.4
 sudoku_solver_core @ git+https://github.com/yrangana/Sudoku-Solver-Core.git@main
 uvicorn==0.34.0
