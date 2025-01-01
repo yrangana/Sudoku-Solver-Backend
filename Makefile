@@ -18,11 +18,21 @@ format:
 lint:
 	pylint --disable=R,C,W0707 app/*.py tests/*.py
 
+# Build the Docker image
+docker-build:
+	docker build -t sudoku-solver-backend .
+
+# Run the Docker container
+docker-run:
+	docker run -d --name sudoku-solver-backend -p 8000:8000 sudoku-solver-backend
+
 # Clean up temporary files
 clean:
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
 	find . -type f -name "*.pyo" -delete
+	docker stop sudoku-solver-backend
+	docker rm sudoku-solver-backend
 
 # Display help information
 help:
