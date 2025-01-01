@@ -21,7 +21,7 @@ jobs:
         run: docker build -t sudoku-solver-backend .
 
       - name: Run Docker Container
-        run: docker run -d --rm -p 8000:8000 sudoku-solver-backend
+        run: docker run -d -p 8000:8000 sudoku-solver-backend
 
       - name: Test API Container
         run: |
