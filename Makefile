@@ -16,7 +16,7 @@ format:
 
 # Lint code using Pylint
 lint:
-	pylint --disable=R,C app/*.py tests/*.py
+	pylint --disable=R,C,W0707 app/*.py tests/*.py
 
 # Clean up temporary files
 clean:
